@@ -1,0 +1,5 @@
+#!/bin/sh
+echo " "
+/usr/bin/uptime
+echo " "
+/usr/bin/who -ur
