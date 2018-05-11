@@ -70,4 +70,4 @@ fi
 powerline-daemon -q
 POWERLINE_BASH_CONTINUATION=1
 POWERLINE_BASH_SELECT=1
-source /mnt/storage/video/Other/.vim/bundle/powerline/powerline/bindings/bash/powerline.sh
+. ~/.vim/bundle/powerline/powerline/bindings/bash/powerline.sh
