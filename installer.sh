@@ -16,6 +16,6 @@ cd $1/.vim/bundle/YouCompleteMe
 ./install.py --all
 
 cd /opt/dotfiles
-
+cp -f /opt/dotfiles/config/gitpushall /usr/local/bin
 sudo update-motd
 
