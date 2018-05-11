@@ -10,6 +10,9 @@ cp -f /opt/dotfiles/config/landscape-sysinfo.wrapper /usr/share/landscape
 sudo -H cp -f -r /opt/dotfiles/config/powerline /usr/share
 sudo -H cp -f -r /opt/dotfiles/config/vimrc.local /etc/vim
 
+rm -f /etc/bash.bashrc
+cp -f /opt/dotfiles/config/bash.bashrc /etc/bash.bashrc
+
 cp -f -r /opt/dotfiles/config/.vim $1
 cp -f -r /mnt/storage/video/Other/bundle ~/.vim
 
