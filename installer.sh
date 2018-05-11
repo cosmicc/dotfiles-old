@@ -1,5 +1,5 @@
 apt update
-apt install powerline build-essential cmake python-dev python3-dev
+apt install powerline build-essential cmake python-dev python3-dev zsh
 #python2 -m pip install fonts-powerline
 
 rm /etc/update-motd.d/10-help-text
@@ -31,4 +31,9 @@ cd /opt/dotfiles
 cp -f /opt/dotfiles/config/gitpushall /usr/local/bin
 sudo update-motd
 
-echo "run chown <user>.<user> ~/.vim -R"
+git clone https://github.com/bhilburn/powerlevel9k.git ~/powerlevel9k
+echo 'source  ~/powerlevel9k/powerlevel9k.zsh-theme' >> ~/.zshrc
+
+chsh -s $(which zsh)
+
+chown ip.ip ~/.vim -R
