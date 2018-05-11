@@ -11,6 +11,7 @@ sudo -H cp -f -r /opt/dotfiles/config/powerline /usr/share
 sudo -H cp -f -r /opt/dotfiles/config/vimrc.local /etc/vim
 
 cp -f -r /opt/dotfiles/config/.vim $1
+cp -f -r /mnt/storage/video/Other/bundle ~/.vim
 
 cd $1/.vim/bundle/YouCompleteMe
 ./install.py --all
@@ -19,3 +20,4 @@ cd /opt/dotfiles
 cp -f /opt/dotfiles/config/gitpushall /usr/local/bin
 sudo update-motd
 
+echo "run chown <user>.<user> ~/.vim -R"
