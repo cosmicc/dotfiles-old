@@ -13,8 +13,16 @@ sudo -H cp -f -r /opt/dotfiles/config/vimrc.local /etc/vim
 cp -f -r /opt/dotfiles/config/.vim $1
 cp -f -r /mnt/storage/video/Other/bundle ~/.vim
 
+# Install Go
+cd ~
+sudo curl -O https://storage.googleapis.com/golang/go1.9.1.linux-amd64.tar.gz
+sudo tar -xvf go1.9.1.linux-amd64.tar.gz
+sudo mv go /usr/local
+export PATH=$PATH:/usr/local/go/bin
+
+# Compile YouCompleteMe
 cd $1/.vim/bundle/YouCompleteMe
-./install.py --all
+./install.py --install
 
 cd /opt/dotfiles
 cp -f /opt/dotfiles/config/gitpushall /usr/local/bin
