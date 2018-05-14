@@ -35,6 +35,6 @@ git clone https://github.com/bhilburn/powerlevel9k.git ~/powerlevel9k
 echo 'source  ~/powerlevel9k/powerlevel9k.zsh-theme' >> ~/.zshrc
 
 cp -f /opt/dotfiles/config/dircolors ~/.dircolors
-chsh -s $(which zsh)
+chsh -s $(which bash)
 
 chown ip.ip ~/.vim -R
