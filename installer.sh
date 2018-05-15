@@ -30,13 +30,18 @@ cd /opt/dotfiles
 cp -f /opt/dotfiles/config/gitpushall /usr/local/bin
 sudo update-motd
 
-pip3 install powerline-shell
+python3 -m pip install powerline-shell
+python2 -m pip install powerline-shell
 
 mkdir ~/.config
 mkdir ~/.config/powerline-shell
+sudo mkdir /root/.config
+sudo mkdir /root/.config/powerline-shell
 
-cp -f /opt/dotfiles/config/powerline-shell.json ~/.powerline-shell.json
+cp -f /opt/dotfiles/config/.powerline-shell.json ~/.powerline-shell.json
 cp -f /opt/dotfiles/config/galaxy.py ~/.config/powerline-shell
+sudo cp -f /opt/dotfiles/config/.powerline-shell.json /root/.powerline-shell.json
+sudo cp -f /opt/dotfiles/config/galaxy.py /root/.config/powerline-shell
 
 cp -f /opt/dotfiles/config/dircolors ~/.dircolors
 chsh -s $(which bash)
