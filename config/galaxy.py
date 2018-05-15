@@ -18,7 +18,7 @@ class Color(DefaultColor):
     READONLY_BG = 1
     READONLY_FG = 15
 
-    REPO_CLEAN_BG = 2   # green
+    REPO_CLEAN_BG = 28   # green
     REPO_CLEAN_FG = 227   # black
     REPO_DIRTY_BG = 1   # red
     REPO_DIRTY_FG = 15  # white
