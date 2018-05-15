@@ -7,7 +7,6 @@ cp -f /opt/dotfiles/config/60-extras /etc/update-motd.d
 chmod ugo+x /etc/update-motd.d/60-extras
 
 cp -f /opt/dotfiles/config/landscape-sysinfo.wrapper /usr/share/landscape
-sudo -H cp -f -r /opt/dotfiles/config/powerline /usr/share
 sudo -H cp -f -r /opt/dotfiles/config/vimrc.local /etc/vim
 
 rm -f /etc/bash.bashrc
@@ -31,8 +30,13 @@ cd /opt/dotfiles
 cp -f /opt/dotfiles/config/gitpushall /usr/local/bin
 sudo update-motd
 
-git clone https://github.com/bhilburn/powerlevel9k.git ~/powerlevel9k
-echo 'source  ~/powerlevel9k/powerlevel9k.zsh-theme' >> ~/.zshrc
+pip3 install powerline-shell
+
+mkdir ~/.config
+mkdir ~/.config/powerline-shell
+
+cp -f /opt/dotfiles/config/powerline-shell.json ~/.powerline-shell.json
+cp -f /opt/dotfiles/config/galaxy.py ~/.config/powerline-shell
 
 cp -f /opt/dotfiles/config/dircolors ~/.dircolors
 chsh -s $(which bash)
