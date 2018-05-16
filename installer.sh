@@ -1,5 +1,5 @@
 apt update
-apt install powerline build-essential cmake python-dev python3-dev zsh
+apt install powerline build-essential cmake python-dev python3-dev
 #python2 -m pip install fonts-powerline
 
 rm /etc/update-motd.d/10-help-text
