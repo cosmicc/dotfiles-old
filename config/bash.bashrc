@@ -67,10 +67,13 @@ if [ -x /usr/lib/command-not-found -o -x /usr/share/command-not-found/command-no
 	}
 fi
 
- function _update_ps1() {
-   PS1=$(powerline-shell $?)
-   }
- if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then
-     PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
- fi
+# ALIASES
+alias pyd="/opt/galaxymedia/daemonize.py"
+
+function _update_ps1() {
+  PS1=$(powerline-shell $?)
+  }
+if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then
+    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
+fi
 
