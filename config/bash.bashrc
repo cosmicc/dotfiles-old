@@ -69,6 +69,7 @@ fi
 
 # ALIASES
 alias pyd="/opt/galaxymedia/daemonize.py"
+alias py="/opt/galaxymedia/pyexec"
 
 function _update_ps1() {
   PS1=$(powerline-shell $?)
